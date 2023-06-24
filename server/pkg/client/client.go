@@ -3,7 +3,7 @@ package client
 import (
 	"context"
 
-	"github.com/faba/syns/server/proto"
+	"github.com/lehaiviet1995/faba-server/server/proto"
 	"google.golang.org/grpc"
 )
 

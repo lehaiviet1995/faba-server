@@ -1,4 +1,4 @@
-module github.com/faba/syns/server
+module github.com/lehaiviet1995/faba-server/server
 
 go 1.19
 
