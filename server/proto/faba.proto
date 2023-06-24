@@ -1,0 +1,28 @@
+// version proto
+syntax = "proto3";
+
+package faba;
+option go_package = "github.com/faba/syns/server";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+service FabaService {
+  rpc RegisterEmployee(RegisterEmployeeRequest) returns (RegisterEmployeeResponse) {}
+}
+
+message RegisterEmployeeRequest {
+  google.protobuf.StringValue name = 1;
+  google.protobuf.StringValue address = 2;
+  google.protobuf.StringValue phone = 3;
+  TimestampValue birth_date_time = 4;
+}
+
+message TimestampValue {
+  google.protobuf.Timestamp value = 1;
+}
+
+message RegisterEmployeeResponse {
+  string message = 1;
+  string uuid = 2;
+}
