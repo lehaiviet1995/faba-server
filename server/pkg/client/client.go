@@ -20,6 +20,6 @@ func NewClient(cc grpc.ClientConnInterface) (FabaServiceClient, error) {
 	return client, nil
 }
 
-func (fb *FabaServiceClient) PublishSarFile(ctx context.Context, in *proto.RegisterEmployeeRequest, opts ...grpc.CallOption) (*proto.RegisterEmployeeResponse, error) {
+func (fb *FabaServiceClient) RegisterEmployee(ctx context.Context, in *proto.RegisterEmployeeRequest, opts ...grpc.CallOption) (*proto.RegisterEmployeeResponse, error) {
 	return fb.client.RegisterEmployee(ctx, in, opts...)
 }

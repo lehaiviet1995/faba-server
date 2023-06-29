@@ -5,6 +5,7 @@ import (
 	"log"
 	"net"
 
+	"github.com/lehaiviet1995/faba-server/server/service"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 )
@@ -16,6 +17,7 @@ func main() {
 	}
 
 	server := grpc.NewServer()
+	service.Apply(server)
 
 	fmt.Println(fmt.Sprintf("start grpc server port: %s", "8080"))
 
